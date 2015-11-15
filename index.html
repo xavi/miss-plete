@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>MissPlete: Misspelling-tolerant autocomplete</title>
+    <meta content="initial-scale=1.0, width=device-width" name="viewport">
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400italic|Montserrat'
+          rel='stylesheet'
+          type='text/css'>
+    <link rel="stylesheet" href="miss-plete.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <main>
+      <h1>MissPlete</h1>
+
+      <h3>
+        Misspelling-tolerant autocomplete in less than 200 lines of
+        no-dependencies ECMAScript 2015 (ES6)
+      </h3>
+
+      <p>
+        MissPlete supports synonyms and it can be customized with any algorithm
+        to select and sort the completions. By default it uses a
+        <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein
+        distance</a> algorithm, which allows for
+        <a href="https://vimeo.com/28758945#t=11m35s">better sloppy
+        interaction</a> than the usual completion based on exact substring
+        matches.
+      </p>      
+
+      <h2>Demo</h2>
+
+      <input name="country" autocomplete="off" autofocus
+             placeholder="Country or dependent territory" />
+
+      <h2>Usage</h2>
+
+      <pre><code>import MissPlete from './MissPlete.js';
+
+new MissPlete({
+  input: document.querySelector('input[name="city"]'),
+
+  // Each subarray contains an option and all its synonyms
+  options: [["Barcelona", "BCN"], ["San Francisco", "SF"]],
+
+  // It must return an object with at least the properties `score` and  
+  // `displayValue`.
+  // Default is a Levenshtein distance function. 
+  scoreFn: (inputValue, optionSynonyms) => {
+    // Crazy random example
+    const score = Math.random();
+    return { score: score, displayValue: `${optionSynonyms[0]} (${score})` };
+  },
+
+  // Called for each scored option, in order, starting with the one with the
+  // greatest score. It's passed the scored option (as returned by scoreFn)
+  // and its index in the score-sorted list. It must return the &lt;li&gt; node
+  // to display, or null if nothing else has to be displayed.
+  // Default returns &lt;li&gt; nodes for the 8 best-scored options.
+  listItemFn: (scoredOption, itemIndex) => {
+    const li = scoredOption.score < 0.5 ? null : document.createElement("li");
+    li && li.appendChild(document.createTextNode(scoredOption.displayValue));
+    return li;
+  }  
+});
+      </code></pre>
+
+      <h2><a href="https://github.com/xavi/miss-plete">Source</a></h2>
+    </main>
+
+    <script src="bundle.js"></script>
+  </body>
+</html>
