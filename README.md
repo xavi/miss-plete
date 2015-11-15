@@ -12,6 +12,9 @@ than the usual completion based on exact substring matches.
 
 Less than 200 lines of code. No dependencies.
 
+# Demo
+
+http://xavi.github.io/miss-plete
 
 # Usage
 
