@@ -61,7 +61,7 @@ new MissPlete({
   // Default returns &lt;li&gt; nodes for the 8 best-scored options.
   listItemFn: (scoredOption, itemIndex) => {
     const li = scoredOption.score < 0.5 ? null : document.createElement("li");
-    li && li.appendChild(document.createTextNode(scoredOption.displayValue));
+    li &amp;&amp; li.appendChild(document.createTextNode(scoredOption.displayValue));
     return li;
   }  
 });
