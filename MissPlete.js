@@ -18,9 +18,7 @@ class MissPlete {
 
     this.input.addEventListener('input', () => {
       if (this.input.value.length > 0) {
-        // const normalizedInput = this.input.value.trim().toLowerCase();
         this.scoredOptions = this.options
-          //.map(option => scoreFn(normalizedInput, option))
           .map(option => scoreFn(this.input.value, option))
           .sort((a, b) => b.score - a.score);
       } else {
@@ -84,16 +82,6 @@ class MissPlete {
     };
   }
 
-  // For now (in ECMAScript 2015), classes only let you create static methods, but
-  // not static data properties. There are two work-arounds for that.
-  // http://exploringjs.com/es6/ch_classes.html#leanpub-auto-static-data-properties
-  //
-  // getter
-  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get
-  //
-  // NOTE: Constants can be declared with uppercase or lowercase, but a common
-  // convention is to use all-uppercase letters.
-  // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/const
   static get MAX_ITEMS() {
     return 8;
   }
@@ -187,8 +175,6 @@ class MissPlete {
   }
 
   removeDropdown() {
-    // this.ul && this.ul.remove();
-    // this.ul = null;
     this.container && this.container.remove();
     this.container = null;
     this.ul = null;
