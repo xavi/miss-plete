@@ -49,9 +49,9 @@ new MissPlete({
 
   // Called for each scored option, in order, starting with the one with the
   // greatest score. It's passed the scored option (as returned by scoreFn)
-  // and its index in the score-sorted list. It must return the &lt;li&gt; node
+  // and its index in the score-sorted list. It must return the <li> node
   // to display, or null if nothing else has to be displayed.
-  // Default returns &lt;li&gt; nodes for the 8 best-scored options.
+  // Default returns <li> nodes for the 8 best-scored options.
   listItemFn: (scoredOption, itemIndex) => {
     const li = scoredOption.score < 0.5 ? null : document.createElement("li");
     li && li.appendChild(document.createTextNode(scoredOption.displayValue));
