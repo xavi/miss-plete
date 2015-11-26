@@ -38,6 +38,7 @@ new MissPlete({
   // Each subarray contains an option and all its synonyms
   options: [["Barcelona", "BCN"], ["San Francisco", "SF"]],
 
+  // OPTIONAL
   // It must return an object with at least the properties `score` and  
   // `displayValue`.
   // Default is a Levenshtein distance function. 
@@ -47,6 +48,7 @@ new MissPlete({
     return { score: score, displayValue: `${optionSynonyms[0]} (${score})` };
   },
 
+  // OPTIONAL
   // Called for each scored option, in order, starting with the one with the
   // greatest score. It's passed the scored option (as returned by scoreFn)
   // and its index in the score-sorted list. It must return the <li> node
