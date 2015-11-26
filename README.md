@@ -41,7 +41,7 @@ new MissPlete({
   // OPTIONAL
   // It must return an object with at least the properties `score` and  
   // `displayValue`.
-  // Default is a Levenshtein distance function. 
+  // Default is a Jaro–Winkler similarity function.
   scoreFn: (inputValue, optionSynonyms) => {
     // Crazy random example
     const score = Math.random();
