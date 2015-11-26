@@ -235,7 +235,7 @@ const options = [
   ["Uganda", "UG"],
   ["Ukraine", "UA"],
   ["United Arab Emirates", "AE"],
-  ["United Kingdom of Great Britain and Northern Ireland", "GB"],
+  ["United Kingdom of Great Britain and Northern Ireland", "GB", "United Kingdom"],
   ["United States of America", "US", "United States"],
   ["United States Minor Outlying Islands", "UM"],
   ["Uruguay", "UY"],

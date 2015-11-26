@@ -1,6 +1,6 @@
 {
   "name": "miss-plete",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "devDependencies": {
     "babel-core": "^6.1.4",
     "babel-loader": "^6.1.0",

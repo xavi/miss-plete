@@ -1,4 +1,4 @@
-import levenshtein from './levenshtein.js';
+import jaroWinkler from './jaroWinkler.js';
 import memoize from './memoize.js';
 
 class MissPlete {
@@ -67,18 +67,18 @@ class MissPlete {
   static scoreFn(inputValue, optionSynonyms) {
     let closestSynonym = null;
     for (let synonym of optionSynonyms) {
-      let d = levenshtein(
+      let similarity = jaroWinkler(
         synonym.trim().toLowerCase(),
         inputValue.trim().toLowerCase()
       );
-      if (closestSynonym === null || d < closestSynonym.distance) {
-        closestSynonym = { value: synonym, distance: d };
-        if (d === 0) { break; }
+      if (closestSynonym === null || similarity > closestSynonym.similarity) {
+        closestSynonym = { similarity, value: synonym };
+        if (similarity === 1) { break; }
       }
     }
     return {
-      score: -closestSynonym.distance,
-      displayValue: optionSynonyms[0],
+      score: closestSynonym.similarity,
+      displayValue: optionSynonyms[0]
     };
   }
 

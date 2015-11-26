@@ -16,15 +16,15 @@
       <h1>MissPlete</h1>
 
       <h3>
-        Misspelling-tolerant autocomplete in less than 200 lines of
+        Misspelling-tolerant autocomplete in less than 220 lines of
         no-dependencies ECMAScript 2015 (ES6)
       </h3>
 
       <p>
         MissPlete supports synonyms and it can be customized with any algorithm
         to select and sort the completions. By default it uses a
-        <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein
-        distance</a> algorithm, which allows for
+        <a href="https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance">
+        Jaro–Winkler distance</a> algorithm, which allows for
         <a href="https://vimeo.com/28758945#t=11m35s">better sloppy
         interaction</a> than the usual completion based on exact substring
         matches.
@@ -45,6 +45,7 @@ new MissPlete({
   // Each subarray contains an option and all its synonyms
   options: [["Barcelona", "BCN"], ["San Francisco", "SF"]],
 
+  // OPTIONAL
   // It must return an object with at least the properties `score` and  
   // `displayValue`.
   // Default is a Levenshtein distance function. 
@@ -54,6 +55,7 @@ new MissPlete({
     return { score: score, displayValue: `${optionSynonyms[0]} (${score})` };
   },
 
+  // OPTIONAL
   // Called for each scored option, in order, starting with the one with the
   // greatest score. It's passed the scored option (as returned by scoreFn)
   // and its index in the score-sorted list. It must return the &lt;li&gt; node
