@@ -5,12 +5,12 @@ ECMAScript 6 (ES6).
 
 It supports synonyms and it can be customized with any algorithm to select and
 sort the completions. By default it uses a
-[Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance)
+[Jaro–Winkler distance](https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance)
 algorithm, which allows for
 [better sloppy interaction](https://vimeo.com/28758945#t=11m35s)
 than the usual completion based on exact substring matches.
 
-Less than 200 lines of code. No dependencies.
+Less than 220 lines of code. No dependencies.
 
 # Demo
 
@@ -21,7 +21,7 @@ http://xavi.github.io/miss-plete
 Because
 [ES6 is not yet fully supported in any browser](https://kangax.github.io/compat-table/es6/),
 to use MissPlete you'll have to transpile its files (MissPlete.js,
-levenshtein.js, and memoize.js) to ES5 and bundle them with your project (using,
+jaroWinkler.js, and memoize.js) to ES5 and bundle them with your project (using,
 for example, [Babel](https://babeljs.io/) and
 [webpack](https://webpack.github.io/)).
  
