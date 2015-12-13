@@ -4,7 +4,7 @@
     "webpack": "webpack"
   },
   "dependencies": {
-    "miss-plete": "1.2.0"
+    "miss-plete": "1.4.2"
   },
   "devDependencies": {
     "babel-core": "^6.3.17",

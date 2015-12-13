@@ -4,7 +4,7 @@
     "webpack": "webpack"
   },
   "dependencies": {
-    "miss-plete": "1.2.0"
+    "miss-plete": "1.4.2"
   },
   "devDependencies": {
     "source-map-loader": "^0.1.5",
