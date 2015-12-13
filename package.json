@@ -1,6 +1,13 @@
 {
   "name": "miss-plete",
   "version": "1.2.0",
+  "homepage": "http://xavi.github.io/miss-plete/",
+  "license": "MIT",
+  "author": "Xavi Caballé (http://xavi.caballe.pro/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xavi/miss-plete.git"
+  },
   "main": "dist/bundle.js",
   "devDependencies": {
     "babel-core": "^6.3.17",
