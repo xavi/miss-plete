@@ -14,7 +14,7 @@ Less than 220 lines of code. No dependencies.
 
 # Demo
 
-http://xavi.github.io/miss-plete
+[http://xavi.github.io/miss-plete](http://xavi.github.io/miss-plete)
 
 # Usage
 
