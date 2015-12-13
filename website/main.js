@@ -1,4 +1,4 @@
-import MissPlete from './MissPlete.js';
+import MissPlete from '../src/MissPlete.js';
 
 const options = [
   ["Afghanistan", "AF"],
@@ -217,7 +217,7 @@ const options = [
   ["Swaziland", "SZ"],
   ["Sweden", "SE"],
   ["Switzerland", "CH"],
-  ["Syrian Arab Republic", "SY"],
+  ["Syrian Arab Republic", "SY", "Syria"],
   ["Taiwan, Province of China", "TW", "Taiwan"],
   ["Tajikistan" , "TJ"],
   ["Tanzania, United Republic of", "TZ", "Tanzania"],

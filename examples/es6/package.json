@@ -1,0 +1,16 @@
+{
+  "name": "es6",
+  "scripts": {
+    "webpack": "webpack"
+  },
+  "dependencies": {
+    "miss-plete": "1.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.17",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "source-map-loader": "^0.1.5",
+    "webpack": "^1.12.9"
+  }
+}

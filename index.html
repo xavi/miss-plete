@@ -7,8 +7,7 @@
     <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400italic|Montserrat'
           rel='stylesheet'
           type='text/css'>
-    <link rel="stylesheet" href="miss-plete.css" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="website/styles.css" />
   </head>
   <body>
 
@@ -28,7 +27,7 @@
         <a href="https://vimeo.com/28758945#t=11m35s">better sloppy
         interaction</a> than the usual completion based on exact substring
         matches.
-      </p>      
+      </p>
 
       <h2>Demo</h2>
 
@@ -46,7 +45,7 @@ new MissPlete({
   options: [["Barcelona", "BCN"], ["San Francisco", "SF"]],
 
   // OPTIONAL
-  // It must return an object with at least the properties `score` and  
+  // It must return an object with at least the properties `score` and
   // `displayValue`.
   // Default is a Jaro–Winkler similarity function.
   scoreFn: (inputValue, optionSynonyms) => {
@@ -65,13 +64,13 @@ new MissPlete({
     const li = scoredOption.score < 0.5 ? null : document.createElement("li");
     li &amp;&amp; li.appendChild(document.createTextNode(scoredOption.displayValue));
     return li;
-  }  
+  }
 });
       </code></pre>
 
       <h2><a href="https://github.com/xavi/miss-plete">Source</a></h2>
     </main>
 
-    <script src="bundle.js"></script>
+    <script src="website/bundle.js"></script>
   </body>
 </html>

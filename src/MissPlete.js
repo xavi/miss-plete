@@ -1,5 +1,6 @@
 import jaroWinkler from './jaroWinkler.js';
 import memoize from './memoize.js';
+import './miss-plete.css';
 
 class MissPlete {
 
@@ -92,7 +93,7 @@ class MissPlete {
       : document.createElement("li");
     li && li.appendChild(document.createTextNode(scoredOption.displayValue));
     return li;
-  }  
+  }
 
   getSiblingIndex(node) {
     let index = -1;
@@ -104,7 +105,7 @@ class MissPlete {
     return index;
   }
 
-  renderOptions() {  
+  renderOptions() {
     const documentFragment = document.createDocumentFragment();
 
     this.scoredOptions.every((scoredOption, i) => {

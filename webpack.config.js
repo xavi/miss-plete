@@ -1,24 +1,25 @@
 var webpack = require("webpack");
 
 module.exports = {
-  entry: ['babel-polyfill', './main.js'],
+  entry: ['./src/MissPlete.js'],
   output: {
     path: __dirname,
-    filename: 'bundle.js'
+    filename: 'dist/bundle.js',
+    libraryTarget: 'umd',
+    library: "MissPlete"
   },
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
-        loader: 'babel?presets[]=es2015'
+        test: /\.js$/,
+        loader: 'babel',
+        query: { presets: ['es2015'] }
+      },
+      {
+        test: /\.css$/,
+        loader: "style-loader!css-loader"
       }
     ]
   },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({minimize: true})
-  ],
-  stats: {
-    colors: true
-  },
-  devtool: 'source-map',
+  devtool: 'source-map'
 };

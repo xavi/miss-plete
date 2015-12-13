@@ -1,0 +1,13 @@
+{
+  "name": "es5",
+  "scripts": {
+    "webpack": "webpack"
+  },
+  "dependencies": {
+    "miss-plete": "1.2.0"
+  },
+  "devDependencies": {
+    "source-map-loader": "^0.1.5",
+    "webpack": "^1.12.9"
+  }
+}
