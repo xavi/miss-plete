@@ -16,18 +16,14 @@ Less than 220 lines of code. No dependencies.
 
 [http://xavi.github.io/miss-plete](http://xavi.github.io/miss-plete)
 
+# Installation
+
+    npm install miss-plete --save
+
+The library is published to the npm registry transpiled to ES5 and UMD, so it can be used in ES5 ([`examples/es5/`](https://github.com/xavi/miss-plete/tree/gh-pages/examples/es5)) and ES6 ([`examples/es6/`](https://github.com/xavi/miss-plete/tree/gh-pages/examples/es6)).
+
+
 # Usage
-
-Because
-[ES6 is not yet fully supported in any browser](https://kangax.github.io/compat-table/es6/),
-to use MissPlete you'll have to transpile its files (MissPlete.js,
-jaroWinkler.js, and memoize.js) to ES5 and bundle them with your project (using,
-for example, [Babel](https://babeljs.io/) and
-[webpack](https://webpack.github.io/)).
- 
-Include the bundled JavaScript and miss-plete.css on the project page.
-
-This sample code shows how to use it:
 
 ```javascript
 import MissPlete from './MissPlete.js';

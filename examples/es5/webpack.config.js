@@ -6,8 +6,9 @@ module.exports = {
     filename: 'dist/bundle.js'
   },
   module: {
-    // Makes available miss-plete's source maps for ES6 code
-    // http://stackoverflow.com/q/32702478
+    // Uses source-map-loader to merge miss-plete's source map for ES6 code
+    // with the source map emitted here by the devtool configuration below
+    // http://webpack.github.io/docs/configuration.html#devtool
     preLoaders: [
       {
         test: /\.js$/,
